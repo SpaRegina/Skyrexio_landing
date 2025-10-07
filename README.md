@@ -1,4 +1,4 @@
-# Skyrexio Landing Tests
+# Skyrexio_landing
 
 ## Настройка
 1. Создайте `src/test/resources/config.properties`
