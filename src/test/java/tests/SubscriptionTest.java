@@ -9,7 +9,7 @@ public class SubscriptionTest extends BaseTest {
         landingPage.openPage()
                 .getFooter()
                 .scrollToFooter()
-                .enterEmail("lypisalo@denipl.com")
+                .enterEmail(validEmail)
                 .clickSubscribe()
                 .verifySuccessMessage();
     }
