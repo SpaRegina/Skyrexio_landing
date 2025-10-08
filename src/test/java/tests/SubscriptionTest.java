@@ -9,6 +9,7 @@ public class SubscriptionTest extends BaseTest {
         landingPage.openPage()
                 .getFooter()
                 .scrollToFooter()
+                .waitForFooterToLoad()
                 .enterEmail(validEmail)
                 .clickSubscribe()
                 .verifySuccessMessage();

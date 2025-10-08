@@ -3,6 +3,9 @@ package pages;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 
+import java.time.Duration;
+
+import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.*;
 
 public class FooterPage {
@@ -12,12 +15,16 @@ public class FooterPage {
 
     public FooterPage scrollToFooter() {
         executeJavaScript("window.scrollTo(0, document.body.scrollHeight)");
-        sleep(3000);
+        return this;
+    }
+
+    public FooterPage waitForFooterToLoad() {
+        subscribeButton.shouldBe(visible, Duration.ofSeconds(10));
         return this;
     }
 
     public FooterPage enterEmail(String email) {
-        emailInput.shouldBe(Condition.visible).setValue(email);
+        emailInput.shouldBe(visible).setValue(email);
         return this;
     }
 
@@ -27,7 +34,7 @@ public class FooterPage {
     }
 
     public void verifySuccessMessage() {
-        successMessage.shouldBe(Condition.visible);
+        successMessage.shouldBe(visible);
         emailInput.shouldHave(Condition.empty);
     }
 }
