@@ -25,7 +25,7 @@ public class BaseTest {
         Configuration.timeout = 10000;
         Configuration.baseUrl = "https://skyrexio.com/";
         Configuration.browserSize = "start-maximized";
-        Configuration.holdBrowserOpen = true;
+        Configuration.holdBrowserOpen = false;
 
         landingPage = new LandingPage();
     }

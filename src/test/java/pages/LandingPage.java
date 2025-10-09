@@ -10,4 +10,8 @@ public class LandingPage {
     public FooterPage getFooter() {
         return new FooterPage();
     }
+
+    public SocialBlockPage getSocialBlock() {
+        return new SocialBlockPage();
+    }
 }
